@@ -16,17 +16,26 @@
     height: 250px; 
     position: relative;
     -webkit-transition: .4s;
+    -moz-transition: .4s;
     transition: .4s;
+    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
     transition: 1s;
     -webkit-transform: rotateY(0deg);
     transform: rotateY(0deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    visibility: visible;
 }
 .front, .back { position: absolute; width: 100%; height: 100%; background:#fff; border-radius:20px; overflow: hidden;}
 .front { z-index: 1; }
-.back { z-index: -1; transform: rotateY(180deg); display: flex; flex-direction: column; justify-content: center; align-content: center;}
-.card_item:hover .card { transform: rotateY(180deg); z-index: 1;}
-.card_item:hover .front { z-index: -1;}
+.back { z-index: 0; -webkit-transform: rotateY(180deg); transform: rotateY(180deg); display: flex; flex-direction: column; justify-content: center; align-content: center;}
+.card_item:hover .card { -webkit-transform: rotateY(180deg); -moz-transform: rotateY(180deg); transform: rotateY(180deg); z-index: 1;}
+.card_item:hover .front {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) ; z-index: 0;
+}
 
 /*card-content*/
 .card_item h3 { margin: 14px 0 4px 0; }
@@ -52,13 +61,7 @@
 .type_fairy {background:#d973b7}
 .type_steel {background:#827a69}
 
-.CardList img {
-    width: 100px;
-    height:100px;
-    border-radius: 50%;
-    background:#ececec;
-    overflow: hidden;
-}
+.CardList img { width: 100px; height:100px; border-radius: 50%; background:#ececec; overflow: hidden;}
 
 /*pokeinfo - common*/
 .pokeinfo {font-size: 14px;}
@@ -66,7 +69,6 @@
 .card_item .title{display:inline-block; background:#ececec; padding:2px 8px; border-radius:10px; font-weight:600; font-size: 12px;}
 .card_item .title1 {background:#e8d0cf}
 .card_item .title2 {background:#cfe8e4}
-
 
 /*basic_info*/
 .basic_info {font-weight: 700; margin-top: 10px;}
@@ -81,8 +83,6 @@
 .stats {margin-top: 10px; font-weight: 700; margin-top: 10px; }
 .stats strong {width: 108px;}
 .stats span {padding-left: 6px;}
-
-
 
 @media screen and (max-width: 1400px){
     .card_item {

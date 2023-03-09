@@ -1,19 +1,17 @@
 import React from "react";
 import './Card.css';
 
-
 function getFilteredCards(pokemon, search) {
     if (search !== null && search.length !== 0) {
         return pokemon.filter((it) => it.name === search);
-
     }
     return pokemon;
 }
 
-
 function CardList({ pokemon, search }) {
 
     const newFilter = getFilteredCards(pokemon, search);
+
     return (
         <div className="CardList_wrap">
             <ul className="CardList">

@@ -14,21 +14,18 @@ const App = () => {
     setLoading(true);
     const url = 'https://pokeapi.co/api/v2/pokemon?limit=151';
     const res = await axios.get(url);
-    getPokemon(res.data.results);
+    const promises = res.data.results.map(async (it) => {
+      const result = await axios.get(it.url);
+      return result.data;
+    });
+    const pokeData = await Promise.all(promises);
+    pokeData.sort((a, b) => a.id - b.id);
+    setPokeData(pokeData);
     setLoading(false);
   };
-  const getPokemon = async (res) => {
-    res.map(async (it) => {
-      const result = await axios.get(it.url)
-      setPokeData(state => {
-        state = [...state, result.data]
-        return state;
-      })
-    })
-  }
+
   useEffect(() => {
     getPokemonsData();
-    // eslint-disable-next-line
   }, []);
 
   const handleSearch = (text) => {
@@ -41,9 +38,11 @@ const App = () => {
         pokemon={pokeData}
         handleSearch={handleSearch}
       />
-      {!loading && pokeData ? (
+      {loading ? (
+        <h1>Loading...</h1>
+      ) : (
         <CardList pokemon={pokeData} search={search} />
-      ) : null}
+      )}
       <Footer />
     </div>
   );

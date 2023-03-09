@@ -1,33 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
+/*common*/
 * {margin:0; padding:0;  -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 body {font-family: 'Quicksand', sans-serif;}
 li {list-style: none;}
-
-header {}
+/*header*/
+header {display: flex; flex-direction: column; align-items: center;}
 h1 {font-weight: 700; padding:40px 0 20px 0}
-.input_wrap{position: relative;}
-
-
+/*form*/
+.input_wrap{position: relative; width: 240px; display: flex; justify-content: center;}
 .form_box{ padding-bottom: 30px;}
 form {display: flex; justify-content: center; align-content:center;}
 input {width: 200px; height:40px; padding:5px 20px; border:1px solid #f2b65e}
-.close_button {display: none; width: 30px; height:30px; border:none; background:#ececec; border-radius: 50%; position:absolute; top:0; left:50%; margin-left:44px; margin-top:5px; cursor: pointer;}
+/*close button*/
+.close_button {display: none; width: 24px; height:24px; border:none; background:#ececec; border-radius: 50%; position:absolute; top:3px; left:50%; margin-left:44px; margin-top:5px; cursor: pointer;}
 .close_button.visible {display: block;}
-
-.close_button img {width:14px; height:14px;}
+.close_button img {width:12px; height:12px; margin-top: 2px;}
+/*search button*/
 .search_button {display: inline-block; width:40px; height: 40px; border:none; background:#f2b65e; overflow: hidden; cursor: pointer;}
 .search_button img {width:30px; height:30px;}
-
-
+/*auto keywords*/
 .auto_keywords {position: absolute; top:40px; left:50%; margin-left:-120px; width: 200px; height: 300px; overflow-y: scroll; background: #fff; z-index:20; -webkit-box-shadow: 0px 15px 12px -11px rgba(0,0,0,0.32); box-shadow: 0px 15px 12px -11px rgba(0,0,0,0.20);}
 .auto_keywords li {width: 100%; height:40px; line-height: 40px; border-bottom:1px solid #ececec;}
 .auto_keywords li:hover {background:#f2b65e}
-
-.footer {
-    background:black;
-    color:white;
-    height:30px;
-    line-height: 30px;
-    font-size: 13px;
-}
+/*footer*/
+.footer { background:black; color:white; height:30px; line-height: 30px; font-size: 13px;}
