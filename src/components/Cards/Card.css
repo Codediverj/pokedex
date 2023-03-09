@@ -7,7 +7,7 @@
     flex-wrap: wrap;
 }
 .card_item {
-    width: calc(100% / 4);
+    width: calc(100% / 5);
     padding:20px;
     perspective: 500px;
 }
@@ -82,9 +82,11 @@
 .stats strong {width: 108px;}
 .stats span {padding-left: 6px;}
 
-@media screen and (max-width: 900px){
+
+
+@media screen and (max-width: 1400px){
     .card_item {
-        width: calc(100% / 3);
+        width: calc(100% / 4);
     }
 }
 @media screen and (max-width: 678px){
