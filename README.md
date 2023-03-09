@@ -4,8 +4,13 @@
 
 Project URL : https://codediverj.github.io/pokedex/
 
-## Features
-**Goal:** Mini Pokedex App**Summary:** Create a Pokedex app. The purpose of the app is to allow the user to search and find details regarding different Pokemon. Use the Pokemon API ([https://pokeapi.co/](https://pokeapi.co/)) to help fetch the necessary data.**Tech Requirements:**
+## Description
+**Goal:** Mini Pokedex App
+
+**Summary:**
+Create a Pokedex app. The purpose of the app is to allow the user to search and find details regarding different Pokemon. Use the Pokemon API ([https://pokeapi.co/](https://pokeapi.co/)) to help fetch the necessary data.
+
+**Tech Requirements:**
 
 - API: [https://pokeapi.co/](https://pokeapi.co/)
 - Tech Stack:
