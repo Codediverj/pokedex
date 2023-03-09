@@ -1,23 +1,50 @@
-import logo from './logo.svg';
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import './App.css';
+import Footer from './components/CommonArea/Footer.js';
+import Header from './components/CommonArea/Header.js';
+import CardList from './components/Cards/CardsList';
 
-function App() {
+const App = () => {
+  const [pokeData, setPokeData] = useState([]);
+  const [search, setSearch] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  const getPokemonsData = async () => {
+    setLoading(true);
+    const url = 'https://pokeapi.co/api/v2/pokemon?limit=151';
+    const res = await axios.get(url);
+    getPokemon(res.data.results);
+    setLoading(false);
+  };
+  const getPokemon = async (res) => {
+    res.map(async (it) => {
+      const result = await axios.get(it.url)
+      setPokeData(state => {
+        state = [...state, result.data]
+        return state;
+      })
+    })
+  }
+  useEffect(() => {
+    getPokemonsData();
+    // eslint-disable-next-line
+  }, []);
+
+  const handleSearch = (text) => {
+    setSearch(text);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header
+        pokemon={pokeData}
+        handleSearch={handleSearch}
+      />
+      {!loading && pokeData ? (
+        <CardList pokemon={pokeData} search={search} />
+      ) : null}
+      <Footer />
     </div>
   );
 }

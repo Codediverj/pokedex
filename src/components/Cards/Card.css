@@ -1,0 +1,98 @@
+.CardList_wrap {padding:30px; background:#f5d7ab;}
+.CardList{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+.card_item {
+    width: calc(100% / 4);
+    padding:20px;
+    perspective: 500px;
+}
+.card{
+    width: 100%; 
+    height: 250px; 
+    position: relative;
+    transition: .4s;
+    transform-style: preserve-3d;
+    transition: 1s;
+    transform: rotateY(0deg);
+}
+.front, .back { position: absolute; width: 100%; height: 100%; background:#fff; border-radius:20px; overflow: hidden;}
+.front { z-index: 1; backface-visibility: hidden; }
+.back { transform: rotateY(180deg); display: flex; flex-direction: column; justify-content: center; align-content: center;}
+.card_item:hover .card { transform: rotateY(180deg);}
+
+
+
+/*card-content*/
+.card_item h3 { margin: 14px 0 4px 0; }
+
+/*types*/
+.types{color:#fff; font-size: 13px; margin-bottom: 14px;}
+.types span {padding:0 5px 2px 5px; font-weight: 700; border-radius:4px; line-height: 1;}
+.type_bug {background:#b0aa37}
+.type_dragon {background:#b0aa37}
+.type_electric {background:#ffee00; color:#45410c}
+.type_fighting {background:#de2e28}
+.type_fire {background:#c25027}
+.type_flying {background:#27a8c2}
+.type_ghost {background:#7c37b0}
+.type_grass {background:#22a12a}
+.type_ground {background:#106e33}
+.type_ice {background:#37acb0}
+.type_normal {background:#7a7a7a}
+.type_poison {background:#702769}
+.type_psychic {background:#b03794}
+.type_rock {background:#827a69}
+.type_water {background:#376fb0}
+.type_fairy {background:#d973b7}
+.type_steel {background:#827a69}
+
+.CardList img {
+    width: 100px;
+    height:100px;
+    border-radius: 50%;
+    background:#ececec;
+    overflow: hidden;
+}
+
+/*pokeinfo - common*/
+.pokeinfo {font-size: 14px;}
+.pokeinfo li {display:block;}
+.card_item .title{display:inline-block; background:#ececec; padding:2px 8px; border-radius:10px; font-weight:600; font-size: 12px;}
+.card_item .title1 {background:#e8d0cf}
+.card_item .title2 {background:#cfe8e4}
+
+
+/*basic_info*/
+.basic_info {font-weight: 700; margin-top: 10px;}
+.basic_info > span {display: block; margin-bottom: 4px;}
+
+/*ability*/
+.ability {font-weight: 700; font-size:13px;}
+.ability strong{display: block; margin-bottom: 4px;}
+.ability span{display: block;}
+
+/*stats*/
+.stats {margin-top: 10px; font-weight: 700; margin-top: 10px; }
+.stats strong {width: 108px;}
+.stats span {padding-left: 6px;}
+
+@media screen and (max-width: 900px){
+    .card_item {
+        width: calc(100% / 3);
+    }
+}
+@media screen and (max-width: 678px){
+    .card_item {
+        width: calc(100% / 2);
+    }
+}
+@media screen and (max-width: 480px){
+    .card_item {
+        width: 100%;
+    }
+}

@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# Pokedex
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- This project is for `React` practice.
 
-## Available Scripts
+Project URL : https://codediverj.github.io/pokedex/
 
-In the project directory, you can run:
+## Features
+**Goal:** Mini Pokedex App**Summary:** Create a Pokedex app. The purpose of the app is to allow the user to search and find details regarding different Pokemon. Use the Pokemon API ([https://pokeapi.co/](https://pokeapi.co/)) to help fetch the necessary data.**Tech Requirements:**
 
-### `npm start`
+- API: [https://pokeapi.co/](https://pokeapi.co/)
+- Tech Stack:
+- Language: **JavaScript** or **TypeScript**
+- Framework: **ReactJS** or **NextJS**
+- Styling the app can be done in whatever way you're most comfortable with (e.g., **CSS**, **SASS/SCSS**, **TailwindCSS**)
+- Use **git** to keep track of your progress with good commit messages throughout development
+- Use **GitHub** to keep a repository of your project code
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Feature Requirements:**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Users should be able to search for a Pokemon (via a search bar) and get a "card" filled with info about that Pokemon. Specifically, the “card” should have at least:
+- Name
+- Height
+- Weight
+- Type(s)
+- Abilities
+- Base Stats (HP/Attack/Defense/Special-Attack/Special-Defense/Speed)
+- At least one image/sprite of the Pokemon
+- Deploy the app on a static server like Vercel, Netlify, or GitHub pages so the link can be visited live
 
-### `npm test`
+**Bonus Requirements:**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Make your styling awesome. Try to match the Pokemon type with the style of the card (e.g., red for fire types etc.). Also, try to style the Pokemon's base stats since they are numeric.
+- Have a way to display or cycle through all the sprites of that Pokemon, instead of just showing one on the "card".
+- Have the app display a few random Pokemon upon loading before the user searches anything.
+- Implement auto-complete options for possible Pokemon matches as the user types their query into the search (like Google search bar suggesting results).
 
-### `npm run build`
+When you are done, please send me the following:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Link to your app's GitHub repo
+- Link to your deployed application
