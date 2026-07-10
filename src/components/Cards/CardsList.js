@@ -7,7 +7,7 @@ function getFilteredCards(pokemon, search) {
     }
     return pokemon;
 }
-
+//testing
 function CardList({ pokemon, search }) {
 
     const newFilter = getFilteredCards(pokemon, search);
